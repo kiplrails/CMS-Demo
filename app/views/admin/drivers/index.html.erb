@@ -1,0 +1,10 @@
+<h1>All Drivers for <%= @company.name %></h1>
+
+<% @drivers.each do |driver| %>
+  <li>
+    <%= link_to driver.name, admin_company_driver_path(@company, driver) %>
+    <%= link_to "Edit", edit_admin_company_driver_path(@company, driver) %>
+  </li>
+<% end %>
+
+<%= link_to "Add a driver", new_admin_company_driver_path(@company) %>

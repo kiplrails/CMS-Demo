@@ -1,0 +1,19 @@
+<% form_for [:admin, @company] do |form| %>
+  <%= form.error_messages %>
+  <p>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </p>
+  <p>
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </p>
+  
+  <p>
+    <%= form.submit "Save" %>
+  </p>
+<% end %>
