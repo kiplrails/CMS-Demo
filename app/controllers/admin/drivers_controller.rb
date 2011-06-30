@@ -1,5 +1,5 @@
 module Admin
-  class DriversController < ApplicationController
+  class DriversController < BaseController
     before_filter :load_company
 
     def index
