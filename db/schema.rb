@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110630055313) do
+ActiveRecord::Schema.define(:version => 20110630065245) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20110630055313) do
     t.string   "city"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "site_id"
   end
 
   create_table "drivers", :force => true do |t|
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20110630055313) do
     t.integer  "company_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "site_id"
   end
 
   add_index "drivers", ["company_id"], :name => "index_drivers_on_company_id"

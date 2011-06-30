@@ -1,10 +1,10 @@
 class CompaniesController < ApplicationController
   def index
-    @companies = Company.all
+    @companies = current_site.companies.all
   end
 
   def show
-    @company = Company.find(params[:id])
+    @company = current_site.companies.find(params[:id])
     @drivers = @company.drivers
   end
 end

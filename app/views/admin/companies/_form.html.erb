@@ -12,7 +12,10 @@
     <%= form.label :city %>
     <%= form.text_field :city %>
   </p>
-  
+  <p>
+    <%= form.label :site %>
+    <%= form.select :site_id, Site.all.collect{|s| [s.name, s.id]} %>
+  </p>
   <p>
     <%= form.submit "Save" %>
   </p>
